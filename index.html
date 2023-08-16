@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="fetchTodos()">Fetch Todos</button>
+  <button onclick="logTodos()">Log Todos</button>
+  <button onclick="populateTodos()">Populate Todos</button>
+  <input type="number" min="1" max="10" id="user">
+  <button onclick="filterTodos()">filteredTodo</button>
+  <ol id="todo-list">
+  <!-- LIs will go here -->
+  </ol>
+
+
+  <script src="./todo.js" defer>
+     document.getElementById("addButton").addEventListener("click", function () {
+      // Create a new <li> element
+      const liElement = document.createElement("li");
+
+      // Create text for the <li> element
+      const liText = document.createTextNode("delectus aut autem");
+
+      // Append the text to the <li> element
+      liElement.appendChild(liText);
+
+      // Get the <ol> element by its id
+      const myList = document.getElementById("myList");
+
+      // Append the <li> element to the <ol> element
+      myList.appendChild(liElement);
+    });
+  </script>
+</body>
+</html>
